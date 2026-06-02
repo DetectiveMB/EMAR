@@ -1,9 +1,0 @@
-name: all_minilm
-model_name: sentence-transformers/all-MiniLM-L6-v2
-tokenizer_name: sentence-transformers/all-MiniLM-L6-v2
-max_tokens: 256
-normalize: True
-pooling_mode: mean
-device: cuda
-embedding_size: 384
-teacher_name: all_minilm

@@ -1,5 +1,0 @@
-name: monot5_small
-model_name: castorini/monot5-small-msmarco-10k
-tokenizer_name: castorini/monot5-small-msmarco-10k
-max_tokens: 256
-device: cuda

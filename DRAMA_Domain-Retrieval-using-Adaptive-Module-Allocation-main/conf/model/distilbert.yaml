@@ -1,9 +1,0 @@
-name: distilbert
-model_name: distilbert-base-uncased
-tokenizer_name: distilbert-base-uncased
-max_tokens: 256
-normalize: True
-pooling_mode: mean
-device: cuda
-embedding_size: 768
-teacher_name: bert
