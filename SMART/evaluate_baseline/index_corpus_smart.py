@@ -14,7 +14,7 @@ args = parser.parse_args()
 corpus = []
 current_dataset_collection = []
 
-with open(f'/leonardo_scratch/fast/IscrC_MOSAICIR/SMART/data/{args.df_name}/collection.jsonl', 'r') as f:
+with open(f'/SMART/data/{args.df_name}/collection.jsonl', 'r') as f:
     for i, line in enumerate(f, start=1):
         line = line.strip()
         if not line:
@@ -33,10 +33,10 @@ with open(f'/leonardo_scratch/fast/IscrC_MOSAICIR/SMART/data/{args.df_name}/coll
 
     df = pd.DataFrame(corpus)
 
-    df.to_csv(f'/leonardo_scratch/fast/IscrC_MOSAICIR/SMART/data/{args.df_name}/collection.csv', index=False)
+    df.to_csv(f'/SMART/data/{args.df_name}/collection.csv', index=False)
 
 
-corpus = pd.read_csv(f'/leonardo_scratch/fast/IscrC_MOSAICIR/SMART/data/{args.df_name}/collection.csv', engine = 'python', on_bad_lines='skip')
+corpus = pd.read_csv(f'/SMART/data/{args.df_name}/collection.csv', engine = 'python', on_bad_lines='skip')
 print(len(corpus))
 corpus = corpus.dropna(subset=['text'])
 corpus = corpus[corpus['text'].str.strip() != '']
@@ -48,8 +48,8 @@ def docs_iter(df):
                 "text": row["text"]
         }
 
-model = pyterrier_dr.SBertBiEncoder(model_name = '/leonardo_scratch/fast/IscrC_MOSAICIR/SMART/models/' + args.model_name)
-index = pyterrier_dr.FlexIndex(f'/leonardo_scratch/fast/IscrC_MOSAICIR/SMART/index/{args.df_name}-{args.model_name}.flex')
+model = pyterrier_dr.SBertBiEncoder(model_name = '/SMART/models/' + args.model_name)
+index = pyterrier_dr.FlexIndex(f'/SMART/index/{args.df_name}-{args.model_name}.flex')
 idx_pipeline = model >> index
 
 idx_pipeline.index(docs_iter(corpus))
