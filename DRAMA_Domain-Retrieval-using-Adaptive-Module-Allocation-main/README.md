@@ -1,4 +1,4 @@
-Code for **DRAMA: Domain Retrieval using Adaptive Module Allocation**
+Code for **SMART: Scalable Multi-domain Adaptive ReTrieval**
 
 For the academic dataset: <br>
 First download the datset from zenodo: https://zenodo.org/records/6606557 <br>
