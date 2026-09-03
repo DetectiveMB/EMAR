@@ -1,9 +1,0 @@
-name: cross_deberta
-model_name: cross-encoder/nli-deberta-v3-large
-tokenizer_name: cross-encoder/nli-deberta-v3-large
-max_tokens: 256
-normalize: True
-pooling_mode: mean
-device: cuda
-embedding_size: 384
-teacher_name: cross_minilm
