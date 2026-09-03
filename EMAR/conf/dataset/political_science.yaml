@@ -1,0 +1,10 @@
+name: political_science
+data_dir: ../dataset/political_science
+batch_size: 256
+shuffle: True
+max_epoch: 10
+lr: 2e-5
+model_dir: ../models/${dataset.name}
+embedding_dir: ../embeddings/${dataset.name}
+runs_dir: ../runs/${dataset.name}
+loss_margin: 0.1

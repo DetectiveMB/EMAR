@@ -1,0 +1,10 @@
+name: all
+data_dir: ../dataset/all
+batch_size: 256
+shuffle: True
+max_epoch: 10
+lr: 2e-5
+model_dir: ../models/${dataset.name}
+embedding_dir: ../embeddings/${dataset.name}
+runs_dir: ../runs/${dataset.name}
+loss_margin: 0.1

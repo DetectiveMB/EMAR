@@ -1,0 +1,10 @@
+name: se_english
+data_dir: ../SE-PQA_comm/english
+batch_size: 256
+shuffle: True
+max_epoch: 10
+lr: 2e-5
+model_dir: ../models/${dataset.name}
+embedding_dir: ../embeddings/${dataset.name}
+runs_dir: ../runs/${dataset.name}
+loss_margin: 0.1
